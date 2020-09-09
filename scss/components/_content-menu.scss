@@ -1,0 +1,35 @@
+/* content menu section */
+.content-menu{
+    grid-area: content-menu;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(248, 248, 248);
+    border-bottom: 1px solid rgb(156, 156, 156);
+}
+
+.content-dashboard{
+    background-color: white;
+    border-right: 1px solid rgb(156, 156, 156);
+    margin-bottom: -2px;
+    padding: 0 1rem;
+}
+
+.search-input-div{
+    position: relative;
+    width: 28%;
+    // max-width: 310px;
+}
+.search-input {
+    height: 50%;
+    margin-top: 10px;
+    width: 90%;
+    margin-right: 1rem;
+    padding-left: 3px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 14px;
+    right: 10%;
+
+}

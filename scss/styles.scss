@@ -4,7 +4,7 @@
 
 .app {
     display: grid;
-    grid-template-rows: 70px 50px 500px 100px 1fr ;
+    grid-template-rows: 70px 50px 50px 500px 500px ;
     grid-template-columns: 6% 47% 47%;
     grid-template-areas: 
     "header header header"
@@ -22,94 +22,10 @@ body{
 }
 
 
-/* Header section */
-
-.header{
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    background-color: #716ff3;
-    padding-top: 1rem;
-}
-
-.header-name{
-    line-height: 30px;
-    font-size: 1.5rem;
-    color: rgb(228, 228, 228);
-    font-weight: 300;
-    margin-left: 1rem;
-}
-
-.header-emphasis {
-    color: white;
-    font-weight: bold;
-}
 
 
-.svg {
-    line-height: 50px;
-    margin-left: auto;
-    margin-right: 2rem;
-}
-
-.bell{
-    width: 25px;
-    height:25px;
-}
-
-.profile-photo{
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-}
-.profile-name{
-    margin-right: 1rem;
-    color: rgb(243, 243, 243);
-    margin-top: 7px;
-    margin-left: 5px;
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
-/* navbar section */
 
 
-.side-navbar {
-    grid-area: side-navbar;
-    background-color: rgb(56, 19, 116);
-    display: flex;
-    flex-direction: column;
-}
-
-.side-navbar svg{
-    width: 35%;
-    margin: 1.5rem auto;
-}
-
-
-/* content menu section */
-.content-menu{
-    grid-area: content-menu;
-    display:flex;
-    justify-content: space-between;
-    background-color: rgb(248, 248, 248);
-    border-bottom: 1px solid rgb(156, 156, 156);
-}
-
-.content-dashboard{
-    background-color: white;
-    border-right: 1px solid rgb(156, 156, 156);
-    margin-bottom: -2px;
-    padding: 0 1rem;
-
-}
-.search-input {
-    height: 50%;
-    margin-top: 10px;
-    width: 23%;
-    margin-right: 1rem;
-    padding-left: 3px;
-}
 
 .alert {
     grid-area: alert;

@@ -1,0 +1,14 @@
+/* navbar section */
+
+
+.side-navbar {
+    grid-area: side-navbar;
+    background-color: rgb(56, 19, 116);
+    display: flex;
+    flex-direction: column;
+}
+
+.side-navbar svg{
+    width: 35%;
+    margin: 1.5rem auto;
+}

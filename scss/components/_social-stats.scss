@@ -1,0 +1,63 @@
+.social-stats{
+    margin-top: 2rem; 
+    padding-bottom: 2rem; 
+    border-top: 1px solid $line-color;
+    border-bottom: 1px solid $line-color;
+}
+
+.social-group{
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-heading{
+    padding-left:3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    span{
+        font-size: 1.2rem;
+    }
+}
+
+.social-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icon{
+    width: 60px;
+    height: 60px;
+    background-color: $header-color;
+    border-radius: 50%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+#facebook-icon{
+    @include social-svg(13px, 13px);
+}
+
+#twitter-icon{
+    @include social-svg(15px, 17px);
+}
+
+#google-icon{
+    @include social-svg(15px, 15px);
+}
+
+
+.social-section{
+    width: 23%;
+    display: flex;
+    background-color: rgb(247, 247, 247);
+    justify-content: flex-start;
+    padding-top: 1rem;
+    padding-bottom: 0.7rem;
+}
+
+.social-name{
+    font-size: 0.9rem;
+}
+
+.social-number{
+    font-size: 2rem;
+}

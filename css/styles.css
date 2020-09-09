@@ -337,15 +337,39 @@ template {
   display: none;
 }
 
-.app {
-  display: grid;
-  grid-template-rows: 70px 50px 500px 100px 1fr;
-  grid-template-columns: 6% 47% 47%;
-  grid-template-areas: "header header header" "side-navbar content-menu content-menu" "side-navbar alert alert" "side-navbar chart-1 chart-1" "side-navbar chart-2 chart-3" "side-navbar social-stats social-stats" "side-navbar new-members recent-activity" "side-navbar message-user settings";
+/* content menu section */
+.content-menu {
+  grid-area: content-menu;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #9c9c9c;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+.content-dashboard {
+  background-color: white;
+  border-right: 1px solid #9c9c9c;
+  margin-bottom: -2px;
+  padding: 0 1rem;
+}
+
+.search-input-div {
+  position: relative;
+  width: 28%;
+}
+
+.search-input {
+  height: 50%;
+  margin-top: 10px;
+  width: 90%;
+  margin-right: 1rem;
+  padding-left: 3px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 14px;
+  right: 10%;
 }
 
 /* Header section */
@@ -409,28 +433,144 @@ body {
   margin: 1.5rem auto;
 }
 
-/* content menu section */
-.content-menu {
-  grid-area: content-menu;
+.alert {
   display: flex;
   justify-content: space-between;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #9c9c9c;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #716ff3;
+  padding-top: 0.7rem;
+  margin-top: 0.7rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  border-radius: 5px;
+}
+.alert span {
+  color: white;
 }
 
-.content-dashboard {
-  background-color: white;
-  border-right: 1px solid #9c9c9c;
-  margin-bottom: -2px;
-  padding: 0 1rem;
+.alert-emphasis {
+  font-weight: bold;
 }
 
-.search-input {
-  height: 50%;
-  margin-top: 10px;
-  width: 23%;
+.traffic-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.chart-1 {
+  width: 95%;
+  margin: 0.8rem auto 0.9rem auto;
+}
+
+.traffic-span {
+  margin-right: auto;
+}
+
+.chart-2 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#daily-chart {
+  margin-top: 1rem;
+}
+
+.chart-3 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mobile-chart {
+  margin-top: 1rem;
+}
+
+.social-stats {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.social-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-heading {
+  padding-left: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.social-heading span {
+  font-size: 1.2rem;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #716ff3;
+  border-radius: 50%;
+  margin-left: 1rem;
   margin-right: 1rem;
-  padding-left: 3px;
+}
+
+#facebook-icon {
+  width: 32px;
+  height: 32px;
+  padding-left: 13px;
+  padding-top: 13px;
+}
+
+#twitter-icon {
+  width: 32px;
+  height: 32px;
+  padding-left: 15px;
+  padding-top: 17px;
+}
+
+#google-icon {
+  width: 32px;
+  height: 32px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.social-section {
+  width: 23%;
+  display: flex;
+  background-color: #f7f7f7;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
+}
+
+.social-name {
+  font-size: 0.9rem;
+}
+
+.social-number {
+  font-size: 2rem;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: 70px 50px 50px 500px 500px;
+  grid-template-columns: 6% 47% 47%;
+  grid-template-areas: "header header header" "side-navbar content-menu content-menu" "side-navbar alert alert" "side-navbar chart-1 chart-1" "side-navbar chart-2 chart-3" "side-navbar social-stats social-stats" "side-navbar new-members recent-activity" "side-navbar message-user settings";
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 .alert {

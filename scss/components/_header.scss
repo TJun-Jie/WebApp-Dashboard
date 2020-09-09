@@ -1,0 +1,48 @@
+/* Header section */
+
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    background-color:  $header-color;
+    padding-top: 1rem;
+}
+
+.header-name{
+    line-height: 30px;
+    font-size: 1.5rem;
+    color: rgb(228, 228, 228);
+    font-weight: 300;
+    margin-left: 1rem;
+}
+
+.header-emphasis {
+    color: white;
+    font-weight: bold;
+}
+
+
+.svg {
+    line-height: 50px;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.bell{
+    width: 25px;
+    height:25px;
+}
+
+.profile-photo{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.profile-name{
+    margin-right: 1rem;
+    color: rgb(243, 243, 243);
+    margin-top: 7px;
+    margin-left: 5px;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
