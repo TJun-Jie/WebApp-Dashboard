@@ -1,0 +1,39 @@
+.message-user{
+    @include center;
+    grid-area: message-user;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $line-color;
+}
+
+.message-user > * {
+    margin-bottom: 0.7rem;
+    border: none;
+}
+.user-search{
+    background-color: $input-color;
+
+    padding-left: 5px;
+
+}
+
+
+.user-message{
+    background-color: $input-color;
+    padding-left: 5px;
+
+
+}
+
+
+.message-span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.message-send{
+    background-color: $header-color;
+    color: white;
+    padding-top:5px;
+    padding-bottom:5px;
+}

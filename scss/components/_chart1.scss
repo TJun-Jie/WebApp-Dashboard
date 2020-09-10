@@ -1,13 +1,22 @@
+.chart-1{
+    width: 95%;
+    margin: 0.8rem  auto 0.9rem  auto;
+    border-bottom: 1px solid $line-color;
+
+}
 .traffic-nav{
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.8rem;
+
 }
 
-.chart-1{
-    width: 95%;
-    margin: 0.8rem  auto 0.9rem  auto;
 
+#traffic-chart{
+    max-height: 500px;
+    width: 90%;
+    height: 100%;
+ 
 }
 .traffic-span{
     margin-right: auto;

@@ -2,29 +2,32 @@
 @import 'base/index';
 @import 'components/index';
 
+body{
+    width: 100%;
+    margin: 0;
+}
+
 .app {
     display: grid;
-    grid-template-rows: 70px 50px 50px 500px 500px ;
-    grid-template-columns: 6% 47% 47%;
+    grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%; 
+    grid-template-columns: 15% 85%;
     grid-template-areas: 
-    "header header header"
-    "side-navbar content-menu content-menu"
-    "side-navbar alert alert"
-    "side-navbar chart-1 chart-1"
-    "side-navbar chart-2 chart-3"
-    "side-navbar social-stats social-stats"
-    "side-navbar new-members recent-activity"
-    "side-navbar message-user settings";
+    "header header"
+    "side-navbar content-menu "
+    "side-navbar alert "
+    "side-navbar chart-1 "
+    "side-navbar chart-2 "
+    "side-navbar chart-3 "
+    "side-navbar social-stats "
+    "side-navbar new-members "
+    "side-navbar recent-activity "
+    "side-navbar message-user"
+    "side-navbar  settings";
 }
 
 body{
     font-family: 'Roboto', sans-serif;
 }
-
-
-
-
-
 
 
 .alert {
@@ -49,19 +52,8 @@ body{
     grid-area: social-stats;
 }
 
-.new-members{
-    grid-area: new-members;
-}
 
 
-.recent-activity{
-    grid-area: recent-activity;
-}
 
-.message-user{
-    grid-area: message-user;
-}
 
-.settings{
-    grid-area: settings;
-}
+

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -116,7 +117,7 @@
         <div class="alert">
             <div>
                 <span class="alert-emphasis">Alert &nbsp;</span>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut ut tortor hendrerit, semper arcu euismod, imperdiet dolor. </span>
+                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut ut to </span>
 
             </div>
             <span>&#9747;</span>
@@ -201,17 +202,116 @@
             </div>
         </div>
         <div class="new-members">
-
+            <h3>NEW MEMBERS</h3>
+            <div class="member">
+                <img class="member-image" src="images/member-1.jpg" alt="member-1">
+                <div class="member-info">
+                    <span class="member-name">Victoria Chambers</span>
+                    <span class="member-email">victoria.chambers@test.com</span>
+                    <span class="member-date">02/25/20</span>
+                </div>
+            </div>
+            <div class="member">
+                <img class="member-image" src="images/member-2.jpg" alt="member-2">
+                <div class="member-info">
+                    <span class="member-name">Dale Byrd</span>
+                    <span class="member-email">dale.byrd52@example.com</span>
+                    <span class="member-date">10/15/15</span>
+                </div>
+            </div>
+            <div class="member">
+                <img class="member-image" src="images/member-3.jpg" alt="member-3">
+                <div class="member-info">
+                    <span class="member-name">Dawn Wood</span>
+                    <span class="member-email">dawn.wood@example.com</span>
+                    <span class="member-date">02/25/20</span>
+                </div>
+            </div>
+            <div class="member">
+                <img  class="member-image" src="images/member-4.jpg" alt="member-4">
+                <div class="member-info">
+                    <span class="member-name">Dan Oliver</span>
+                    <span class="member-email">dan.oliver@example.com</span>
+                    <span class="member-date">10/15/20</span>
+                </div>
+            </div>
         </div>
         <div class="recent-activity">
-
-        </div> 
+            <h3>RECENT ACTIVITY</h3>
+            <div class="member">
+                <img class="member-image" src="images/member-1.jpg" alt="member-1">
+                <div class="member-info">
+                    <span class="activity">Victoria Chambers commented on YourApp's SEO Tips</span>
+                    <span class="activity-time">4 hours ago</span>
+                </div>
+                <div class="arrow">></div>
+            </div>
+            <div class="member">
+                <img class="member-image" src="images/member-2.jpg" alt="member-2">
+                <div class="member-info">
+                    <span class="activity">Dale Byrd like the post Facebook's Changes for 2016</span>
+                    <span class="activity-time">5 hours ago</span>
+                </div>
+                 <div class="arrow">></div>
+            </div>
+            <div class="member">
+                <img class="member-image" src="images/member-3.jpg" alt="member-3">
+                <div class="member-info">
+                    <span class="activity">Dawn Wood commented on Facebook's Changes for 2016</span>
+                    <span class="activity-time">5 hours ago</span>
+                </div>
+                 <div class="arrow">></div>
+            </div>
+            <div class="member">
+                <img  class="member-image" src="images/member-4.jpg" alt="member-4">
+                <div class="member-info">
+                    <span class="activity">dan Oliver posted YourApp's SEO Tips</span>
+                    <span class="activity-time">1 day ago</span>
+                </div>
+                 <div class="arrow">></div>
+            </div>
+        </div>
         <div class="message-user">
-
+            <div>
+                <span class="message-span">Message User</span>
+            </div>
+            <input class="user-search" placeholder="Search for User"> 
+            <textarea class="user-message" placeholder="Message User" rows="4"></textarea>
+            <button class="message-send">Send</button>
         </div>
         <div class="settings">
-
+            <div><span class="settings-span">SETTINGS</span></div>
+            <div class="send-notifications">
+                <label>Send Email Notifications</label>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="profile-public">
+                <label>Set Profile To Public</label>
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="time-zone">
+                <select>
+                    <option value="" disabled selected hidden>Select a Timezone</option>
+                </select>
+            </div>
+            <div class="settings-buttons">
+                <button class="save">Save</button>
+                <button  class="cancel">Cancel</button>
+            </div>
         </div>
+    </div> 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
     <script src="app.js"></script>

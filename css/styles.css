@@ -355,7 +355,7 @@ template {
 
 .search-input-div {
   position: relative;
-  width: 28%;
+  width: 60%;
 }
 
 .search-input {
@@ -436,7 +436,7 @@ template {
 .alert {
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 92%;
   margin-left: auto;
   margin-right: auto;
   background-color: #716ff3;
@@ -454,15 +454,22 @@ template {
   font-weight: bold;
 }
 
+.chart-1 {
+  width: 95%;
+  margin: 0.8rem auto 0.9rem auto;
+  border-bottom: 1px solid #dfdfdf;
+}
+
 .traffic-nav {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.8rem;
 }
 
-.chart-1 {
-  width: 95%;
-  margin: 0.8rem auto 0.9rem auto;
+#traffic-chart {
+  max-height: 500px;
+  width: 90%;
+  height: 100%;
 }
 
 .traffic-span {
@@ -470,9 +477,12 @@ template {
 }
 
 .chart-2 {
-  width: 90%;
+  width: 92%;
   margin-left: auto;
   margin-right: auto;
+  max-height: 500px;
+  max-width: 500px;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 #daily-chart {
@@ -480,9 +490,11 @@ template {
 }
 
 .chart-3 {
-  width: 90%;
+  width: 92%;
   margin-left: auto;
   margin-right: auto;
+  max-height: 500px;
+  max-width: 500px;
 }
 
 #mobile-chart {
@@ -498,6 +510,7 @@ template {
 
 .social-group {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -546,12 +559,15 @@ template {
 }
 
 .social-section {
-  width: 23%;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   background-color: #f7f7f7;
   justify-content: flex-start;
   padding-top: 1rem;
   padding-bottom: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 .social-name {
@@ -562,11 +578,254 @@ template {
   font-size: 2rem;
 }
 
+@media (min-width: 768px) {
+  .app {
+    grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%;
+    grid-template-columns: 10% 45% 45%;
+    grid-template-areas: "header header header" "side-navbar content-menu content-menu" "side-navbar alert alert" "side-navbar chart-1 chart-1" "side-navbar chart-2 chart-3" "side-navbar social-stats social-stats" "side-navbar new-members recent-activity" "side-navbar message-user settings";
+  }
+}
+.new-members {
+  grid-area: new-members;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.member-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
+}
+
+.member {
+  display: flex;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 1rem;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.member-email {
+  color: #716ff3;
+  margin-bottom: 0.5rem;
+}
+
+.member-date {
+  margin-bottom: 0.5rem;
+}
+
+.recent-activity {
+  grid-area: recent-activity;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.activity {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.activity-time {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.arrow {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+}
+
+.message-user {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-area: message-user;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.message-user > * {
+  margin-bottom: 0.7rem;
+  border: none;
+}
+
+.user-search {
+  background-color: #f7f7f7;
+  padding-left: 5px;
+}
+
+.user-message {
+  background-color: #f7f7f7;
+  padding-left: 5px;
+}
+
+.message-span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.message-send {
+  background-color: #716ff3;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.settings {
+  grid-area: settings;
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+.settings button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.settings-span {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.send-notifications {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-public {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-zone select {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.settings-buttons {
+  display: flex;
+}
+.settings-buttons button {
+  flex-grow: 1;
+}
+
+.settings > * {
+  margin-bottom: 0.7rem;
+}
+
+.save {
+  background-color: #716ff3;
+  color: white;
+}
+
+.onoffswitch {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #716ff3;
+  color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
 .app {
   display: grid;
-  grid-template-rows: 70px 50px 50px 500px 500px;
-  grid-template-columns: 6% 47% 47%;
-  grid-template-areas: "header header header" "side-navbar content-menu content-menu" "side-navbar alert alert" "side-navbar chart-1 chart-1" "side-navbar chart-2 chart-3" "side-navbar social-stats social-stats" "side-navbar new-members recent-activity" "side-navbar message-user settings";
+  grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%;
+  grid-template-columns: 15% 85%;
+  grid-template-areas: "header header" "side-navbar content-menu " "side-navbar alert " "side-navbar chart-1 " "side-navbar chart-2 " "side-navbar chart-3 " "side-navbar social-stats " "side-navbar new-members " "side-navbar recent-activity " "side-navbar message-user" "side-navbar  settings";
 }
 
 body {
@@ -591,22 +850,6 @@ body {
 
 .social-stats {
   grid-area: social-stats;
-}
-
-.new-members {
-  grid-area: new-members;
-}
-
-.recent-activity {
-  grid-area: recent-activity;
-}
-
-.message-user {
-  grid-area: message-user;
-}
-
-.settings {
-  grid-area: settings;
 }
 
 /*# sourceMappingURL=styles.css.map */

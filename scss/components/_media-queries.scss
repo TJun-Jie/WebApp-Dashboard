@@ -1,0 +1,18 @@
+@media (min-width: 768px ){
+    .app {
+        grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%;
+        grid-template-columns: 10% 45% 45%;
+        grid-template-areas: 
+        "header header header"
+        "side-navbar content-menu content-menu"
+        "side-navbar alert alert"
+        "side-navbar chart-1 chart-1"
+        "side-navbar chart-2 chart-3"
+        "side-navbar social-stats social-stats"
+        "side-navbar new-members recent-activity"
+        "side-navbar message-user settings";
+    }
+
+
+}
+

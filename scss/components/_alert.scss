@@ -1,9 +1,7 @@
 .alert{
     display: flex;
     justify-content: space-between;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    @include center;
     background-color: $header-color;
     span {
         color: white;

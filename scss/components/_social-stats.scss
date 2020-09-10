@@ -7,6 +7,7 @@
 
 .social-group{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -46,12 +47,13 @@
 
 
 .social-section{
-    width: 23%;
+    @include center;
     display: flex;
     background-color: rgb(247, 247, 247);
     justify-content: flex-start;
     padding-top: 1rem;
     padding-bottom: 0.7rem;
+    margin-bottom: 1rem;
 }
 
 .social-name{

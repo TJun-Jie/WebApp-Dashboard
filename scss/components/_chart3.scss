@@ -1,5 +1,7 @@
 .chart-3 {
     @include center;
+    max-height: 500px;
+    max-width: 500px;
 }
 #mobile-chart{
     margin-top: 1rem;
