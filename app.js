@@ -122,9 +122,6 @@ bell.addEventListener('click', () => {
 })
 
 const notificationCross = document.querySelectorAll('.notification-cross');
-notifications.forEach( notification => {
-   
-} )
 
 notificationCross.forEach(cross => {
     cross.addEventListener('click', (e) => {
