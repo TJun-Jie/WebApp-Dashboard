@@ -1,5 +1,6 @@
 .chart-1{
     width: 95%;
+    max-width: 1200px;
     margin: 0.8rem  auto 0.9rem  auto;
     border-bottom: 1px solid $line-color;
 
@@ -11,6 +12,18 @@
 
 }
 
+.traffic-nav-btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .active, .traffic-nav-btn:hover {
+    background-color: #666;
+    color: white;
+  }
 
 #traffic-chart{
     max-height: 500px;

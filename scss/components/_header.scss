@@ -26,12 +26,20 @@
     line-height: 50px;
     margin-left: auto;
     margin-right: 2rem;
+    position: relative;
+
 }
 
 .bell{
     width: 25px;
     height:25px;
+    transition: transform 0.5s ease-out;
+    &:hover{
+        transform: rotateY(180deg);
+        cursor: pointer;
+    }
 }
+
 
 .profile-photo{
     border-radius: 50%;
@@ -45,4 +53,49 @@
     margin-left: 5px;
     font-size: 1.1rem;
     font-weight: 300;
+}
+
+.dropdown {
+    display: block;
+    position: absolute;
+    background: white;
+    width:200px;
+    right: 0;
+    top: 40px;
+    z-index: 10;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hidden{
+    display: none;
+}
+
+.notification {
+    display: flex;
+    p {
+        font-size: 0.75rem;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        line-height: 30px;
+        border-bottom: 1px solid $line-color;
+
+    }
+    justify-content: space-between;
+
+}
+
+.notification-green {
+    width: 4px;
+    height: 4px;
+    background-color: lightgreen;
+    margin-top: 15px;
+    margin-left: 6px;
+    margin-right: 10px;
+}
+
+.notification-cross {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 3px;
+    line-height: 35px;
 }

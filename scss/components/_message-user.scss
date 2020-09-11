@@ -1,18 +1,26 @@
 .message-user{
-    @include center;
+    @include right-line;
     grid-area: message-user;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid $line-color;
+
+
 }
 
-.message-user > * {
+.message-user-div{
+    @include center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    height: 350px;
+}
+
+.message-user-div > * {
     margin-bottom: 0.7rem;
     border: none;
 }
 .user-search{
     background-color: $input-color;
-
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 5px;
 
 }
@@ -34,6 +42,9 @@
 .message-send{
     background-color: $header-color;
     color: white;
+    margin-top: 5px;
     padding-top:5px;
     padding-bottom:5px;
+    height: 32px;
+
 }

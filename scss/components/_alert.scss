@@ -13,6 +13,13 @@
     border-radius: 5px;
 }
 
+
 .alert-emphasis{
     font-weight: bold;
+}
+
+.alert-cross {
+    &:hover{
+        cursor: pointer;
+    }
 }

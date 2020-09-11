@@ -398,11 +398,17 @@ template {
   line-height: 50px;
   margin-left: auto;
   margin-right: 2rem;
+  position: relative;
 }
 
 .bell {
   width: 25px;
   height: 25px;
+  transition: transform 0.5s ease-out;
+}
+.bell:hover {
+  transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .profile-photo {
@@ -420,6 +426,49 @@ template {
   font-weight: 300;
 }
 
+.dropdown {
+  display: block;
+  position: absolute;
+  background: white;
+  width: 200px;
+  right: 0;
+  top: 40px;
+  z-index: 10;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.notification {
+  display: flex;
+  justify-content: space-between;
+}
+.notification p {
+  font-size: 0.75rem;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  line-height: 30px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.notification-green {
+  width: 4px;
+  height: 4px;
+  background-color: lightgreen;
+  margin-top: 15px;
+  margin-left: 6px;
+  margin-right: 10px;
+}
+
+.notification-cross {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 3px;
+  line-height: 35px;
+}
+
 /* navbar section */
 .side-navbar {
   grid-area: side-navbar;
@@ -431,6 +480,22 @@ template {
 .side-navbar svg {
   width: 35%;
   margin: 1.5rem auto;
+}
+
+.side-navbar .st0 {
+  fill: grey;
+}
+
+.side-navbar .svg-active {
+  border-left: 3px solid lightgreen;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.side-navbar .svg-active path {
+  fill: white;
 }
 
 .alert {
@@ -454,8 +519,13 @@ template {
   font-weight: bold;
 }
 
+.alert-cross:hover {
+  cursor: pointer;
+}
+
 .chart-1 {
   width: 95%;
+  max-width: 1200px;
   margin: 0.8rem auto 0.9rem auto;
   border-bottom: 1px solid #dfdfdf;
 }
@@ -464,6 +534,19 @@ template {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.8rem;
+}
+
+.traffic-nav-btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.active, .traffic-nav-btn:hover {
+  background-color: #666;
+  color: white;
 }
 
 #traffic-chart {
@@ -477,12 +560,15 @@ template {
 }
 
 .chart-2 {
+  border-right: 1px solid #dfdfdf;
+}
+
+.chart-2-div {
   width: 92%;
   margin-left: auto;
   margin-right: auto;
   max-height: 500px;
   max-width: 500px;
-  border-bottom: 1px solid #dfdfdf;
 }
 
 #daily-chart {
@@ -578,17 +664,37 @@ template {
   font-size: 2rem;
 }
 
+.app {
+  display: grid;
+  grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%;
+  grid-template-columns: 15% 85%;
+  grid-template-areas: "header header" "side-navbar content-menu " "side-navbar alert " "side-navbar chart-1 " "side-navbar chart-2 " "side-navbar chart-3 " "side-navbar social-stats " "side-navbar new-members " "side-navbar recent-activity " "side-navbar message-user" "side-navbar  settings";
+}
+
 @media (min-width: 768px) {
   .app {
-    grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%;
-    grid-template-columns: 10% 45% 45%;
+    grid-template-rows: 70px 70px 70px 1fr 1fr 10% 18% 14%;
+    grid-template-columns: 6% 47% 47%;
     grid-template-areas: "header header header" "side-navbar content-menu content-menu" "side-navbar alert alert" "side-navbar chart-1 chart-1" "side-navbar chart-2 chart-3" "side-navbar social-stats social-stats" "side-navbar new-members recent-activity" "side-navbar message-user settings";
+  }
+
+  .social-group {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .social-section {
+    width: 30%;
   }
 }
 .new-members {
   grid-area: new-members;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+}
+.new-members h3 {
   margin-left: 1rem;
 }
 
@@ -603,6 +709,12 @@ template {
   display: flex;
   border-bottom: 1px solid #dfdfdf;
   margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 80px;
+}
+.member:last-child {
+  border-bottom: 0;
 }
 
 .member-info {
@@ -629,6 +741,9 @@ template {
   grid-area: recent-activity;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #dfdfdf;
+}
+.recent-activity h3 {
   margin-left: 1rem;
 }
 
@@ -644,27 +759,37 @@ template {
 
 .arrow {
   font-size: 2rem;
+  height: 10%;
+  width: 10%;
   margin-right: 0.5rem;
   margin-top: 1rem;
+  margin-left: auto;
 }
 
 .message-user {
+  border-right: 1px solid #dfdfdf;
+  grid-area: message-user;
+}
+
+.message-user-div {
   width: 92%;
   margin-left: auto;
   margin-right: auto;
-  grid-area: message-user;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #dfdfdf;
+  margin-top: 2rem;
+  height: 350px;
 }
 
-.message-user > * {
+.message-user-div > * {
   margin-bottom: 0.7rem;
   border: none;
 }
 
 .user-search {
   background-color: #f7f7f7;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 5px;
 }
 
@@ -681,8 +806,10 @@ template {
 .message-send {
   background-color: #716ff3;
   color: white;
+  margin-top: 5px;
   padding-top: 5px;
   padding-bottom: 5px;
+  height: 32px;
 }
 
 .settings {
@@ -754,8 +881,8 @@ template {
   display: block;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid #999999;
-  border-radius: 20px;
+  border: 1px solid #999999;
+  border-radius: 10px;
 }
 
 .onoffswitch-inner {
@@ -803,8 +930,8 @@ template {
   top: 0;
   bottom: 0;
   right: 56px;
-  border: 2px solid #999999;
-  border-radius: 20px;
+  border: 1px solid #999999;
+  border-radius: 10px;
   transition: all 0.3s ease-in 0s;
 }
 
@@ -819,13 +946,6 @@ template {
 body {
   width: 100%;
   margin: 0;
-}
-
-.app {
-  display: grid;
-  grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%;
-  grid-template-columns: 15% 85%;
-  grid-template-areas: "header header" "side-navbar content-menu " "side-navbar alert " "side-navbar chart-1 " "side-navbar chart-2 " "side-navbar chart-3 " "side-navbar social-stats " "side-navbar new-members " "side-navbar recent-activity " "side-navbar message-user" "side-navbar  settings";
 }
 
 body {

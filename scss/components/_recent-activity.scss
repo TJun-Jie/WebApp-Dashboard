@@ -2,7 +2,11 @@
     grid-area: recent-activity;
     display: flex;
     flex-direction: column;
-    margin-left: 1rem;
+    border-bottom: 1px solid $line-color;
+    h3 {
+        margin-left: 1rem;
+    }
+
 }
 
 .activity{
@@ -17,6 +21,9 @@
 
 .arrow{
     font-size: 2rem;
+    height: 10%;
+    width: 10%;
     margin-right: 0.5rem;
     margin-top:1rem;
+    margin-left: auto;
 }

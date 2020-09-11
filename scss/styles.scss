@@ -7,23 +7,7 @@ body{
     margin: 0;
 }
 
-.app {
-    display: grid;
-    grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%; 
-    grid-template-columns: 15% 85%;
-    grid-template-areas: 
-    "header header"
-    "side-navbar content-menu "
-    "side-navbar alert "
-    "side-navbar chart-1 "
-    "side-navbar chart-2 "
-    "side-navbar chart-3 "
-    "side-navbar social-stats "
-    "side-navbar new-members "
-    "side-navbar recent-activity "
-    "side-navbar message-user"
-    "side-navbar  settings";
-}
+
 
 body{
     font-family: 'Roboto', sans-serif;

@@ -1,8 +1,11 @@
 .chart-2 {
+    @include right-line;
+}
+
+.chart-2-div{
     @include center;
     max-height: 500px;
     max-width: 500px;
-    border-bottom: 1px solid $line-color;
 
 }
 

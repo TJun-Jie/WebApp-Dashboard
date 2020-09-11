@@ -11,3 +11,13 @@
     padding-left: $padding-left;
     padding-top: $padding-top;
 }
+
+
+@mixin bottom-line {
+    border-bottom: 1px solid $line-color;
+}
+
+@mixin right-line {
+    border-right: 1px solid $line-color;
+
+}
