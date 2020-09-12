@@ -102,13 +102,16 @@ for(let i=0 ; i< trafficNavButton.length; i++){
     })
 }
 
-
+// Alert section
 const alert = document.querySelector('.alert');
 alert.addEventListener('click', () => {
     alert.style.display="none";
 })
 
 
+
+
+// Bell notification section
 const bell = document.querySelector('.bell');
 const dropdown = document.querySelector('.dropdown');
 bell.addEventListener('click', () => {
@@ -128,6 +131,63 @@ notificationCross.forEach(cross => {
         e.target.parentElement.style.display="none"
     })
 })
+
+// Message user section
+
+const userInput = document.querySelector('.user-search');
+const searchOption = document.querySelectorAll('.search-option');
+const searchAutofillDiv = document.querySelector('.search-autofill')
+
+
+userInput.addEventListener('focus' , () => {
+    searchAutofillDiv.style.display = 'flex';
+})
+userInput.addEventListener('blur' , () => {
+    setTimeout(() => {
+        searchAutofillDiv.style.display = 'none';  
+    }, 300);
+})
+
+
+searchOption.forEach(option => {
+    option.addEventListener('click', () => {
+        userInput.value = option.textContent;
+    })
+})
+
+const users = ['Victoria Chambers' , 'Dale Byrd', 'Dawn Wood' , 'Dan Oliver'];
+const userCheck = () => {
+    const  user = userInput.value;
+    let truthy = false;
+    users.forEach( element => {
+        if (user=== element){
+            truthy = true;
+        }
+    })
+    return truthy;
+}
+const userMessage= document.querySelector('.user-message');
+const messageStatus = document.querySelector('.message-status');
+const messageForm = document.querySelector('.message-user-form');
+messageForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(!userInput.value ){
+        messageStatus.textContent= "User field cannot be empty"
+    }
+    else if (!userCheck()){
+        messageStatus.textContent= "User cannot be found"
+    }
+    else if (!userMessage.value){
+        messageStatus.textContent= "Text area cannot be empty"
+    }
+    else {
+        messageStatus.textContent= "Message has been sent";
+        messageStatus.classList.add('sent-success');
+    }
+})
+
+
+// Chart section
 
 const dailyCanvas = document.getElementById("daily-chart");
 const dailyData = {

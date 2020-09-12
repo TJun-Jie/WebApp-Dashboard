@@ -510,6 +510,7 @@ template {
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   border-radius: 5px;
+  height: 70px;
 }
 .alert span {
   color: white;
@@ -666,14 +667,14 @@ template {
 
 .app {
   display: grid;
-  grid-template-rows: 70px 70px 70px 10% 1fr 1fr 1fr 1fr 1fr 8% 10%;
+  grid-template-rows: auto;
   grid-template-columns: 15% 85%;
   grid-template-areas: "header header" "side-navbar content-menu " "side-navbar alert " "side-navbar chart-1 " "side-navbar chart-2 " "side-navbar chart-3 " "side-navbar social-stats " "side-navbar new-members " "side-navbar recent-activity " "side-navbar message-user" "side-navbar  settings";
 }
 
 @media (min-width: 768px) {
   .app {
-    grid-template-rows: 70px 70px 70px 1fr 1fr 10% 18% 14%;
+    grid-template-rows: auto;
     grid-template-columns: 6% 47% 47%;
     grid-template-areas: "header header header" "side-navbar content-menu content-menu" "side-navbar alert alert" "side-navbar chart-1 chart-1" "side-navbar chart-2 chart-3" "side-navbar social-stats social-stats" "side-navbar new-members recent-activity" "side-navbar message-user settings";
   }
@@ -779,9 +780,10 @@ template {
   flex-direction: column;
   margin-top: 2rem;
   height: 350px;
+  position: relative;
 }
 
-.message-user-div > * {
+.message-user-form > * {
   margin-bottom: 0.7rem;
   border: none;
 }
@@ -801,6 +803,8 @@ template {
 .message-span {
   font-size: 1.2rem;
   font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .message-send {
@@ -810,6 +814,40 @@ template {
   padding-top: 5px;
   padding-bottom: 5px;
   height: 32px;
+  cursor: pointer;
+}
+
+.message-user-form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.search-autofill {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  z-index: 10;
+  background-color: white;
+  top: 30px;
+}
+
+.search-option {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  cursor: pointer;
+}
+.search-option:hover {
+  background: #dfdfdf;
+}
+
+.message-status-div {
+  margin-bottom: 1rem;
+  color: red;
+}
+
+.sent-success {
+  color: lightgreen;
 }
 
 .settings {
@@ -882,7 +920,7 @@ template {
   overflow: hidden;
   cursor: pointer;
   border: 1px solid #999999;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .onoffswitch-inner {
@@ -931,7 +969,7 @@ template {
   bottom: 0;
   right: 56px;
   border: 1px solid #999999;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: all 0.3s ease-in 0s;
 }
 
