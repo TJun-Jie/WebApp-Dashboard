@@ -104,7 +104,8 @@ for(let i=0 ; i< trafficNavButton.length; i++){
 
 // Alert section
 const alert = document.querySelector('.alert');
-alert.addEventListener('click', () => {
+const alertCross = document.querySelector('.alert-cross');
+alertCross.addEventListener('click', () => {
     alert.style.display="none";
 })
 

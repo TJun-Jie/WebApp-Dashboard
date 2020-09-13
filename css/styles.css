@@ -364,6 +364,15 @@ template {
   width: 90%;
   margin-right: 1rem;
   padding-left: 3px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-input:focus {
+  border: 1px solid #56b4ef;
+  box-shadow: 0px 0px 3px 1px #c8def0;
 }
 
 .search-icon {
@@ -770,6 +779,7 @@ template {
 .member-info {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 .member-name {
@@ -785,6 +795,7 @@ template {
 
 .member-date {
   margin-bottom: 0.5rem;
+  align-self: flex-end;
 }
 
 .recent-activity {
@@ -844,11 +855,21 @@ template {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
+  outline: none;
+}
+.user-search:focus {
+  border: 1px solid #56b4ef;
+  box-shadow: 0px 0px 3px 1px #c8def0;
 }
 
 .user-message {
   background-color: #f7f7f7;
   padding-left: 5px;
+  outline: none;
+}
+.user-message:focus {
+  border: 1px solid #56b4ef;
+  box-shadow: 0px 0px 3px 1px #c8def0;
 }
 
 .message-span {
