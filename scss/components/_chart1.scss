@@ -7,21 +7,31 @@
 }
 .traffic-nav{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 0.8rem;
+    span {
+        @include header;
+    }
 
+}
+
+.traffic-button-div{
+    display: flex;
 }
 
 .traffic-nav-btn {
     border: none;
     outline: none;
-    padding: 10px 16px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-top: 5px;
     background-color: #f1f1f1;
     cursor: pointer;
   }
   
   .active, .traffic-nav-btn:hover {
-    background-color: #666;
+    background-color: rgb(70, 207, 99);
     color: white;
   }
 

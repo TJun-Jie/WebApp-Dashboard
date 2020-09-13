@@ -41,6 +41,22 @@
         width: 30%;
     }
 
+    .message-user{
+        @include right-line;
+    }
+
+    .new-members{
+        @include right-line;
+    }
+
+    .traffic-nav{
+        flex-direction: row;
+    }
+
+    .traffic-nav-btn {
+        padding: 10px 16px;
+      }
+      
 
 }
 

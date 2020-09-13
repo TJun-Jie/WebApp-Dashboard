@@ -379,6 +379,7 @@ template {
   justify-content: space-between;
   background-color: #716ff3;
   padding-top: 1rem;
+  overflow: visible;
 }
 
 .header-name {
@@ -460,6 +461,7 @@ template {
   margin-top: 15px;
   margin-left: 6px;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .notification-cross {
@@ -467,6 +469,16 @@ template {
   margin-left: auto;
   margin-right: 3px;
   line-height: 35px;
+}
+
+.notification-green-bell {
+  width: 5px;
+  height: 5px;
+  background-color: lightgreen;
+  top: 4px;
+  right: 2px;
+  position: absolute;
+  border-radius: 50%;
 }
 
 /* navbar section */
@@ -504,7 +516,7 @@ template {
   width: 92%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #716ff3;
+  background-color: #7477BF;
   padding-top: 0.7rem;
   margin-top: 0.7rem;
   padding-left: 0.7rem;
@@ -533,20 +545,31 @@ template {
 
 .traffic-nav {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 0.8rem;
+}
+.traffic-nav span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.traffic-button-div {
+  display: flex;
 }
 
 .traffic-nav-btn {
   border: none;
   outline: none;
-  padding: 10px 16px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: 5px;
   background-color: #f1f1f1;
   cursor: pointer;
 }
 
 .active, .traffic-nav-btn:hover {
-  background-color: #666;
+  background-color: #46cf63;
   color: white;
 }
 
@@ -571,6 +594,10 @@ template {
   max-height: 500px;
   max-width: 500px;
 }
+.chart-2-div span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
 #daily-chart {
   margin-top: 1rem;
@@ -582,6 +609,10 @@ template {
   margin-right: auto;
   max-height: 500px;
   max-width: 500px;
+}
+.chart-3 span {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 #mobile-chart {
@@ -602,12 +633,13 @@ template {
 }
 
 .social-heading {
-  padding-left: 3rem;
+  padding-left: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 .social-heading span {
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .social-info {
@@ -687,16 +719,33 @@ template {
   .social-section {
     width: 30%;
   }
+
+  .message-user {
+    border-right: 1px solid #dfdfdf;
+  }
+
+  .new-members {
+    border-right: 1px solid #dfdfdf;
+  }
+
+  .traffic-nav {
+    flex-direction: row;
+  }
+
+  .traffic-nav-btn {
+    padding: 10px 16px;
+  }
 }
 .new-members {
   grid-area: new-members;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #dfdfdf;
-  border-right: 1px solid #dfdfdf;
 }
 .new-members h3 {
   margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .member-image {
@@ -746,6 +795,8 @@ template {
 }
 .recent-activity h3 {
   margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .activity {
@@ -768,8 +819,8 @@ template {
 }
 
 .message-user {
-  border-right: 1px solid #dfdfdf;
   grid-area: message-user;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .message-user-div {
@@ -862,10 +913,11 @@ template {
 .settings button {
   padding-top: 5px;
   padding-bottom: 5px;
+  cursor: pointer;
 }
 
 .settings-span {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -873,16 +925,24 @@ template {
   display: flex;
   flex-direction: column;
 }
+.send-notifications > label {
+  margin-bottom: 8px;
+}
 
 .profile-public {
   display: flex;
   flex-direction: column;
+}
+.profile-public > label {
+  margin-bottom: 8px;
 }
 
 .time-zone select {
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .settings-buttons {
@@ -919,7 +979,6 @@ template {
   display: block;
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid #999999;
   border-radius: 20px;
 }
 

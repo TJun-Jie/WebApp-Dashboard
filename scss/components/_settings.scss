@@ -9,22 +9,29 @@
     button{
         padding-top: 5px;
         padding-bottom: 5px;
+     cursor: pointer;
+
     }
 
 }
 
 .settings-span{
-    font-size: 1.3rem;
-    font-weight: bold;
+    @include header;
 }
 
 .send-notifications{
     display: flex;
     flex-direction: column;
+    & > label{
+        margin-bottom: 8px;
+    }
 }
 .profile-public{
     display: flex;
     flex-direction: column;
+    & > label{
+        margin-bottom: 8px;
+    }
 
 }
 
@@ -32,6 +39,8 @@
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .settings-buttons {
@@ -70,7 +79,7 @@
 }
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
-    border: 1px solid #999999; border-radius: 20px;
+     border-radius: 20px;
 }
 .onoffswitch-inner {
     display: block; width: 200%; margin-left: -100%;

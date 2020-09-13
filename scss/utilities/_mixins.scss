@@ -21,3 +21,8 @@
     border-right: 1px solid $line-color;
 
 }
+
+@mixin header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}

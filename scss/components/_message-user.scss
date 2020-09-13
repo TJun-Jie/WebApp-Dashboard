@@ -1,6 +1,6 @@
 .message-user{
-    @include right-line;
     grid-area: message-user;
+    @include bottom-line;
 
 
 }
@@ -34,8 +34,7 @@
 
 
 .message-span {
-    font-size: 1.2rem;
-    font-weight: bold;
+    @include header;
     display: inline-block;
     margin-bottom: 1rem;
 }

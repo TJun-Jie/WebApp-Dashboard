@@ -12,11 +12,11 @@
 }
 
 .social-heading{
-    padding-left:3rem;
+    padding-left:1rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     span{
-        font-size: 1.2rem;
+        @include header;
     }
 }
 

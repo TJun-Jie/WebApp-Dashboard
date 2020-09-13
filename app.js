@@ -31,8 +31,8 @@ const trafficDataMonthly = {
 const trafficDataHourly = {
     labels: ['12:00PM', '12:10PM', '12:20PM', '12:30PM', '12:40PM', '12:50PM'],
     datasets: [{
-        backgroundColor: 'rgba(167, 197, 139, .3)',
-        borderColor: 'rgb(177, 207, 159)',
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderColor: 'rgba(116, 119, 191, .3)',
         data: [42, 44, 65, 34, 33, 34, 56],
         borderWidth: 2,
         lineTension: 0
@@ -42,8 +42,8 @@ const trafficDataHourly = {
 const trafficDataDaily = {
     labels: ['0AM', '3AM', '6AM', '9AM', '12PM', '3PM', '6PM', '9PM'],
     datasets: [{
-        backgroundColor: 'rgba(167, 197, 139, .3)',
-        borderColor: 'rgb(177, 207, 159)',
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderColor: 'rgba(116, 119, 191, .3)',
         data: [5, 1, 1, 12, 32, 68, 64, 41],
         borderWidth: 2,
         lineTension: 0
@@ -55,8 +55,8 @@ const trafficDataDaily = {
 const trafficDataWeekly = {
     labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     datasets: [{
-        backgroundColor: 'rgba(167, 197, 139, .3)',
-        borderColor: 'rgb(177, 207, 159)',
+        backgroundColor: 'rgba(116, 119, 191, .3)',
+        borderColor: 'rgba(116, 119, 191, .3)',
         data: [50, 74, 29, 49, 72, 80, 64],
         borderWidth: 2,
         lineTension: 0
@@ -123,12 +123,25 @@ bell.addEventListener('click', () => {
 
     }
 })
+const notifications = document.querySelectorAll('.notification');
+function checkExistingNotifications() {
+    unreadNotifcations = [];
+    notifications.forEach(element => {
+        if(element.style.display !== 'none'){
+            unreadNotifcations.push(element);
+        } 
+    })
+    if(unreadNotifcations.length === 0 ){
+        document.querySelector('.notification-green-bell').style.display = 'none';
+    }
+}
 
 const notificationCross = document.querySelectorAll('.notification-cross');
 
 notificationCross.forEach(cross => {
     cross.addEventListener('click', (e) => {
-        e.target.parentElement.style.display="none"
+        e.target.parentElement.style.display="none";
+        checkExistingNotifications();
     })
 })
 
@@ -248,6 +261,67 @@ const mobileOptions = {
         data: mobileData,
         options: mobileOptions
         });
-                
+              
         
+
+// Local storage
+
+function supportsLocalStorage() {
+    try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+    } catch (error) {
+        return false;
+    }
+}
+
+function getRecentSettings() {
+    const settings = localStorage.getItem('recentSettings');
+    if(settings){
+        const settingsObject =  JSON.parse(settings);
+        const {email, publicProfile, timezone} = settingsObject;
+        if (email) {
+            document.querySelector('#myonoffswitch-email').checked = true;
+        }
+        if(publicProfile){
+            document.querySelector('#myonoffswitch-profile').checked = true;
+        }
+        if(timezone){
+            document.querySelector('.time').selectedIndex = timezone;
+        }
+
+    } else{
+        return [];
+    }
+}
+
+function saveSettings() {
+    const email = document.querySelector('#myonoffswitch-email');
+    const publicProfile = document.querySelector('#myonoffswitch-profile');
+    const timezone = document.querySelector('.time');
+    const recentSettings = {
+        email: email.checked,
+        publicProfile: publicProfile.checked,
+        timezone:timezone.options.selectedIndex
+    }
+    localStorage.setItem('recentSettings' , JSON.stringify(recentSettings))
+}
+
+function clearSettings() {
+    localStorage.removeItem('recentSettings');
+}
+
+const settingsSubmit = document.querySelector('.save');
+settingsSubmit.addEventListener('click', () => {
+    saveSettings();
+})
+
+const cancelSettings = document.querySelector('.cancel');
+cancelSettings.addEventListener('click', () => {
+    clearSettings();
+})
         
+window.onload = () => {
+    getRecentSettings();
+}
+
+

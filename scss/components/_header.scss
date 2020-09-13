@@ -6,6 +6,7 @@
     justify-content: space-between;
     background-color:  $header-color;
     padding-top: 1rem;
+    overflow: visible;
 }
 
 .header-name{
@@ -91,6 +92,8 @@
     margin-top: 15px;
     margin-left: 6px;
     margin-right: 10px;
+    border-radius: 50%;
+
 }
 
 .notification-cross {
@@ -98,4 +101,15 @@
     margin-left: auto;
     margin-right: 3px;
     line-height: 35px;
+}
+
+
+.notification-green-bell {
+    width: 5px;
+    height: 5px;
+    background-color: lightgreen;
+    top: 4px;
+    right: 2px;
+    position: absolute;
+    border-radius: 50%;
 }

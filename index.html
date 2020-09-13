@@ -15,6 +15,7 @@
                 <span class="header-emphasis">Your</span><span>App™</span>
             </div>
             <div class="svg">
+                <span class="notification-green-bell"></span>
                 <svg class="bell" id="bell" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                 <style type="text/css">
@@ -137,10 +138,12 @@
         <div class="chart-1">
             <div class="traffic-nav">
                 <span class="traffic-span">Traffic</span>
-                <button class="traffic-nav-btn active">Hourly</button>
-                <button class="traffic-nav-btn">Daily</button>
-                <button class="traffic-nav-btn">Weekly</button>
-                <button class="traffic-nav-btn">Monthly</button>
+                <div class="traffic-button-div">
+                    <button class="traffic-nav-btn active">Hourly</button>
+                    <button class="traffic-nav-btn">Daily</button>
+                    <button class="traffic-nav-btn">Weekly</button>
+                    <button class="traffic-nav-btn">Monthly</button>
+                </div>
             </div>
             <canvas id="traffic-chart"></canvas>
         </div>
@@ -331,7 +334,7 @@
                 </div>
             </div>
             <div class="time-zone">
-                <select>
+                <select class="time">
                     <option value="" disabled selected hidden>Select a Timezone</option>
                     <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
                     <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>

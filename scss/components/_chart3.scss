@@ -2,6 +2,9 @@
     @include center;
     max-height: 500px;
     max-width: 500px;
+    span {
+        @include header;
+    }
 }
 #mobile-chart{
     margin-top: 1rem;

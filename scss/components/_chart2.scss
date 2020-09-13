@@ -6,6 +6,9 @@
     @include center;
     max-height: 500px;
     max-width: 500px;
+    span {
+        @include header;
+    }
 
 }
 
